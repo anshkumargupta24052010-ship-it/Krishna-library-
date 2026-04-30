@@ -1,85 +1,160 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
 
-/* Header */
-header {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+/* HERO */
+.hero {
+  background: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
 }
 
-header h1 {
-    margin: 0;
+.hero button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #ffcc00;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: orange;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+.urgency {
+  color: #ffcc00;
+  margin-top: 10px;
 }
 
-.whatsapp {
-    background: #25D366;
-}
-
-/* Sections */
+/* SECTIONS */
 section {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-/* Gallery */
-.gallery .images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+/* CARDS */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.highlight {
+  border: 2px solid #ffcc00;
+}
+
+/* FACILITIES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
 }
 
 .gallery img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 8px;
 }
 
-/* Features */
-.features ul {
-    list-style: none;
-    padding: 0;
+/* ADMISSION */
+.admission .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.features li {
-    margin: 10px 0;
-    font-size: 18px;
+/* WHATSAPP BUTTON */
+.whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: green;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-/* Footer */
+/* FLOATING WHATSAPP */
+.float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  font-size: 24px;
+  padding: 12px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
 footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
-/* Floating Call Button */
-.call-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: red;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 20px;
+/* MOBILE */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+}
+/* Smooth UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better hover feel */
+.card {
+  transition: 0.3s ease;
+}
+
+/* Better mobile spacing */
+@media (max-width: 600px) {
+  section {
+    padding: 25px 15px;
+  }
+
+  .hero {
+    padding: 50px 15px;
+  }
+}
+
+/* Better urgency animation */
+.urgency {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
