@@ -1,3 +1,9 @@
-console.log("Library website loaded");
+function scrollToSection() {
+  document.getElementById("fees").scrollIntoView({ behavior: "smooth" });
+}
 
-// simple scroll animation (optional later upgrade)
+// selectable cards
+function selectCard(card) {
+  document.querySelectorAll(".card").forEach(c => c.classList.remove("highlight"));
+  card.classList.add("highlight");
+}
