@@ -62,10 +62,10 @@
 <section>
   <h2>Library Gallery</h2>
   <div class="gallery">
-    <img src="images/lib1.jpg">
-    <img src="images/lib2.jpg">
-    <img src="images/lib3.jpg">
-    <img src="images/lib4.jpg">
+    <img src="https://via.placeholder.com/300x200">
+    <img src="https://via.placeholder.com/300x200">
+    <img src="https://via.placeholder.com/300x200">
+    <img src="https://via.placeholder.com/300x200">
   </div>
 </section>
 
@@ -75,14 +75,20 @@
   <p>Peaceful, disciplined and affordable study environment designed for student success.</p>
 </section>
 
+<!-- TRUST -->
+<section>
+  <h2>Our Commitment</h2>
+  <p>Safe, clean and disciplined environment with CCTV security, silent rules and proper study atmosphere.</p>
+</section>
+
 <!-- ADMISSION -->
 <section class="admission">
   <h2>Admission Open</h2>
   <p>Fill the form to reserve your seat</p>
-
-  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc7hQldwIsTLfJaNcgy5HmOL9V--daug4CbfnglJ6WlZEGNtg/viewform?usp=publish-editor" target="_blank">
-    Fill Admission Form
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc7hQldwIsTLfJaNcgy5HmOL9V--daug4CbfnglJ6WlZEGNtg/viewform?usp=publish-editor" target="_blank" onclick="setTimeout(showThankYou, 4000)">
+  Fill Admission Form
   </a>
+
 </section>
 
 <!-- CONTACT -->
@@ -101,10 +107,17 @@
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a class="float" href="https://wa.me/918109944185" target="_blank">
-  💬
-</a>
+<a class="float" href="https://wa.me/918109944185" target="_blank">💬</a>
 
 <script src="script.js"></script>
 </body>
+<div id="thankyouScreen" class="thankyou">
+  <div class="box">
+    <h1>🎉 Thank You!</h1>
+    <p>Your admission request has been submitted successfully.</p>
+    <p>We will contact you shortly.</p>
+
+    <button onclick="closeThankYou()">Back to Home</button>
+  </div>
+</div>
 </html>
